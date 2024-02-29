@@ -1,0 +1,13 @@
+# Python env
+myenv/
+# TXT Files
+app_ids.txt
+downloaded_app_ids.txt
+not_downloaded_app_ids.txt
+# Icon folders
+app_store_icons/
+apple_icons/
+# Other
+icons_archive/
+.DS_Store    
+tests.py
