@@ -30,7 +30,7 @@ def search_app_by_name(app_name: str) -> dict:
 # function to download icon for app using result from search_app_by_name and save icon to apple_icons folder as <bundleId>.png
 def download_icon_for_app(result: dict) -> str:
     print(f"Downloading icon for {result.get('bundleId')}...")
-    icon_url = result.get('artworkUrl60')
+    icon_url = result.get('artworkUrl100')
     if icon_url:
         print(f"Icon URL: {icon_url}")
         icon_response = requests.get(icon_url)

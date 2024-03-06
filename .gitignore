@@ -7,6 +7,7 @@ not_downloaded_app_ids.txt
 # Icon folders
 app_store_icons/
 apple_icons/
+icons/
 # Other
 icons_archive/
 .DS_Store    

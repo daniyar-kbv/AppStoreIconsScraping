@@ -60,7 +60,6 @@ def fetch_app_info_for_app_id(app_id: str, trial_count: int) -> dict:
             result = results[0]
             return result
         else:
-            print("App not found.")
             return None
     else:
         if trial_count > 0:
@@ -71,7 +70,7 @@ def fetch_app_info_for_app_id(app_id: str, trial_count: int) -> dict:
 
 def download_icon_for_app(app_info: dict) -> str:
     print(f"Downloading icon for {app_info.get('bundleId')}...")
-    icon_url = app_info.get('artworkUrl60')
+    icon_url = app_info.get('artworkUrl100')
     if icon_url:
         print(f"Icon URL: {icon_url}")
         icon_response = requests.get(icon_url)
@@ -98,8 +97,8 @@ FETCH_ICONS_MODES = [
 ]
 
 def main():
-    need_to_fetch_app_ids = True
-    fetch_icons_mode = 'ALL_APP_IDS'
+    need_to_fetch_app_ids = False
+    fetch_icons_mode = 'NOT_DOWNLOADED_APP_IDS'
 
     saved_app_ids = read_app_ids()
 
